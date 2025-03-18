@@ -1,9 +1,41 @@
-@use '@/styles/variables.modules';
+@use '@/styles/variables.modules' as *;
 
 .navBarWrapper {
-  background-color: variables.$primaryYellow;
-  color: variables.$primaryRed;
+  background-color: $primaryYellow;
+  color: $primaryBlack;
   height: 75px;
   display: flex;
   align-items: center;
+}
+
+.navBarInner {
+  margin: 0 50px;
+
+  ul {
+    display: flex;
+    gap: 20px;
+    
+    li {
+      list-style-type: none;
+      text-transform: uppercase;
+
+      a {
+        color: $primaryBlack;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 3px;
+        transition: border-bottom 0.5s ease;
+
+        &:hover {
+          border-bottom: 2px solid $primaryBlack;
+        }
+      }
+    }
+    li.newBtn {
+      background-color: white;
+      padding: 10px;
+      // display: block;
+      // border: 1px solid black;
+    }
+  }
 }
