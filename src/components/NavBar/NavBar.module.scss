@@ -1,0 +1,9 @@
+@use '@/styles/variables.modules';
+
+.navBarWrapper {
+  background-color: variables.$primaryYellow;
+  color: variables.$primaryRed;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
